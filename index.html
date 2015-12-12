@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
+    <title>URL</title>
+    <link rel="stylesheet" type="text/css" href="./combine.css">
+</head>
+
+<body>
+    <div class="center-vertical">
+        <div class="content-wrapper">
+            <div class="site-bar">
+                <ul class="site-nav" id="classify"></ul>
+            </div>
+            <div class="site-main"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+    $(".site-main").css("height",window.innerHeight);
+    var data_json = {
+        IT: [{
+            ico: "oschina.ico",
+            intro: "开源中国 www.oschina.net 是目前中国最大的开源技术社区。我们传播开源的理念，推广开源项目，为 IT 开发者提供了一个发现、使用、并交流开源技术的平台。目前开源中国社区已收录超过两万款开源软件。",
+            title: "开源中国",
+            url: "http://www.oschina.net/"
+        }, {
+            ico: "csdn.ico",
+            intro: "全球最大中文IT社区，为IT专业技术人员提供最全面的信息传播和服务平台",
+            title: "CSDN",
+            url: "http://www.csdn.net/"
+        }, {
+            ico: "segmentfault.ico",
+            intro: "专注于程序员开发者的社区平台，提供开发相关的高质量问答，专栏，笔记，招聘，线下活动等服务。",
+            title: "SegmentFault",
+            url: "http://segmentfault.com/"
+        }, {
+            ico: "topthink.ico",
+            intro: "关注互联网开发，挖掘和成就开发者，提供相关的资讯、产品和服务，互联网开发者首选的资讯和服务平台。",
+            title: "极思维",
+            url: "http://www.topthink.com/"
+        }, {
+            ico: "cnblogs.ico",
+            intro: "博客园是一个面向开发者的知识分享社区。自创建以来，博客园一直致力并专注于为开发者打造一个纯净的技术交流社区，推动并帮助开发者通过互联网分享知识，从而让更多开发者从中受益。博客园的使命是帮助开发者用代码改变世界。",
+            title: "博客园",
+            url: "http://www.cnblogs.com/"
+        }, {
+            ico: "imooc.ico",
+            intro: "慕课网（IMOOC）是国内最大的IT技能学习平台。慕课网提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。并且富有交互性及趣味性，你还可以和朋友一起编程。",
+            title: "慕课网",
+            url: "http://www.imooc.com/"
+        }],
+        Blog: [{
+            ico: "youxiuboke.ico",
+            intro: "精心推荐国内外的优秀博客、个人博客、技术博客、独立博客。在这里，你可以找到你喜欢的优秀博客，无论是国内还是国外的优秀博客，总有一个值得我们学习。",
+            title: "优秀博客",
+            url: "http://www.youxiuboke.com/"
+        }, {
+            ico: "zhangxinxu.ico",
+            intro: "张鑫旭的个人博客，张鑫旭的技术作品，张鑫旭的生活成长。",
+            title: "张鑫旭的个人博客",
+            url: "http://www.zhangxinxu.com/"
+        }, {
+            ico: "williamlong.ico",
+            intro: "月光博客，是一个专注于互联网、搜索引擎、社会化网络、IT技术、谷歌地图、软件应用等领域的原创IT科技博客，作者龙威廉（williamlong）。",
+            title: "月光博客",
+            url: "http://www.williamlong.info/"
+        }, {
+            ico: "liaoxuefeng.ico",
+            intro: "研究互联网产品和技术，提供原创中文精品教程",
+            title: "廖雪峰的官方网站",
+            url: "http://www.liaoxuefeng.com/"
+        }],
+        "Fontend Source": [{
+            ico: "htmleaf.ico",
+            intro: "jQuery之家致力于搜集和整理各种jQuery插件，jQuery特效，jquery ui，jQuery 教程，JS特效，网页特效，以及各种html5，css3动画和效果，为前端开发者提供最全面的网页开发素材。",
+            title: "jQuery之家",
+            url: "http://www.htmleaf.com/"
+        }, {
+            ico: "jq22.ico",
+            intro: "本站致力于收集jQuery插件和提供各种jQuery特效的详细使用方法,在线预览，jQuery插件下载及教程",
+            title: "jQuery插件库",
+            url: "http://www.jq22.com/"
+        }],
+        "Fontend Plgin": [{
+            ico: "getbootstrap.ico",
+            intro: "Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            title: "Bootstrap",
+            url: "http://getbootstrap.com/"
+        }, {
+            ico: "bootcss.png",
+            intro: "Bootstrap是Twitter推出的一个用于前端开发的开源工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。目前，Bootstrap最新版本为3.0 。Bootstrap中文网致力于为广大国内开发者提供详尽的中文文档、代码实例等，助力开发者掌握并使用这一框架。",
+            title: "Bootstrap中文网",
+            url: "http://www.bootcss.com/"
+        }],
+        Repositories: [{
+            ico: "npmjs.png",
+            intro: "npm is the package manager for javascript",
+            title: "NPM",
+            url: "https://www.npmjs.com/"
+        }, {
+            ico: "gulpjs.ico",
+            intro: "Automate and enhance your workflow",
+            title: "gulp.js",
+            url: "http://gulpjs.com/"
+        }, {
+            ico: "bower.ico",
+            intro: "Web sites are made of lots of things — frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.",
+            title: "Bower",
+            url: "http://bower.io/"
+        }, {
+            ico: "gruntjs.ico",
+            intro: "The JavaScript Task Runner",
+            title: "Grunt",
+            url: "http://gruntjs.com/"
+        }, {
+            ico: "nuget.ico",
+            intro: "NuGet is the package manager for the Microsoft development platform including .NET. The NuGet client tools provide the ability to produce and consume packages. The NuGet Gallery is the central package repository used by all package authors and consumers.",
+            title: "NuGet",
+            url: "https://www.nuget.org/"
+        }, {
+            ico: "chocolatey.ico",
+            intro: "Chocolatey NuGet is a Machine Package Manager, somewhat like apt-get, but built with Windows in mind.",
+            title: "Chocolatey",
+            url: "https://chocolatey.org/"
+        }, {
+            ico: "cnpmjs.png",
+            intro: "Private npm registry and web for Company.",
+            title: "cnpm",
+            url: "http://cnpmjs.org/"
+        }, {
+            ico: "luarocks.ico",
+            intro: "LuaRocks is the package manager for Lua modules.",
+            title: "LuaRocks",
+            url: "https://luarocks.org/"
+        }],
+        Software: [{
+            ico: "git.ico",
+            intro: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+            title: "Git",
+            url: "http://git-scm.com/"
+        }, {
+            ico: "koala.ico",
+            intro: "Koala is a GUI application for Less, Sass, Compass and CoffeeScript compilation, to help web developers to use them more efficiently. Koala can run in windows, linux and mac.",
+            title: "Koala",
+            url: "http://koala-app.com/"
+        }, {
+            ico: "filezilla.ico",
+            intro: "FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.",
+            title: "FileZilla",
+            url: "https://filezilla-project.org/"
+        }, {
+            ico: "navicat.ico",
+            intro: "Powerful database management & design tool for Win, Mac & Linux. With intuitive GUI, user manages MySQL, MariaDB, SQL Server, SQLite, Oracle & PostgreSQL DB easily.",
+            title: "Navicat",
+            url: "http://koala-app.com/"
+        }, {
+            ico: "Xshell.ico",
+            intro: "Xshell 5 is the latest version of our popular secure terminal emulator. We have redesigned it to offer a more attractive and intuitive user interface with a wide range of unique user convenient features such as split windows, detachable tabs and global synchronized input.",
+            title: "XShell",
+            url: "http://share.weiyun.com/b840efdac38d5f6199a4fdb4dafad494"
+        }, {
+            ico: "foxmail.ico",
+            intro: "Foxmail邮件客户端，简捷易用的邮件管理专家。更高效，更专业，处理邮件更轻松！",
+            title: "Foxmail",
+            url: "http://www.foxmail.com/"
+        }],
+        "Web Software": [{
+            ico: "apache.ico",
+            intro: "The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.",
+            title: "Apache",
+            url: "http://httpd.apache.org/"
+        }, {
+            ico: "mysql.ico",
+            intro: "MySQL is an open-source relational database management system, it was the world's second most widely used RDBMS, and the most widely used open-source client–server model RDBMS.",
+            title: "MySQL",
+            url: "http://www.mysql.com/"
+        }, {
+            ico: "php.ico",
+            intro: "PHP is a popular general-purpose scripting language that is especially suited to web development.",
+            title: "PHP",
+            url: "http://php.net/"
+        }, {
+            ico: "lua.ico",
+            intro: "Lua is a lightweight multi-paradigm programming language designed primarily for embedded systems and clients. Lua is cross-platform since it is written in ANSI C, and has a relatively simple C API.",
+            title: "Lua",
+            url: "http://www.lua.org/"
+        }, {
+            ico: "sqlite.png",
+            intro: "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed database engine in the world.",
+            title: "SQLite",
+            url: "http://www.sqlite.org/"
+        }, {
+            ico: "autoit.png",
+            intro: "AutoIt v3 is a freeware BASIC-like scripting language designed for automating the Windows GUI and general scripting. It uses a combination of simulated keystrokes, mouse movement and window/control manipulation in order to automate tasks in a way not possible or reliable with other languages.",
+            title: "AutoIt",
+            url: "https://www.autoitscript.com"
+        }],
+        Language: [{
+            ico: "php.ico",
+            intro: "PHP is a popular general-purpose scripting language that is especially suited to web development.",
+            title: "PHP",
+            url: "http://php.net/"
+        }],
+        API: [{
+            ico: "mdn.png",
+            intro: "The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find the links to MDN's documentation on Web technologies.",
+            title: "MDN",
+            url: "https://developer.mozilla.org/en-US/docs/Web"
+        }, {
+            ico: "nodejs.ico",
+            intro: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.",
+            title: "NodeJs",
+            url: "https://nodejs.org/api/"
+        }, {
+            ico: "jquery.ico",
+            intro: "The Write Less, Do More, JavaScript Library",
+            title: "jQuery",
+            url: "http://api.jquery.com/"
+        }, {
+            ico: "zeptojs.png",
+            intro: "The aerogel-weight jQuery-compatible JavaScript library",
+            title: "Zepto.js",
+            url: "http://zeptojs.com/"
+        }, {
+            ico: "php.ico",
+            intro: "PHP is a popular general-purpose scripting language that is especially suited to web development.",
+            title: "PHP",
+            url: "http://php.net/docs.php"
+        }, {
+            ico: "msdn.ico",
+            intro: "Microsoft Developer Network, widely referred to by its abbreviation, MSDN, is the portion of Microsoft responsible for managing the firm's relationship with developers and testers, such as hardware developers interested in the operating system (OS), and software developers developing on the various OS platforms or using the API and/or scripting languages of Microsoft's applications.",
+            title: "MSDN",
+            url: "https://msdn.microsoft.com/library"
+        }, {
+            ico: "w3school.ico",
+            intro: "全球最大的中文 Web 技术教程。",
+            title: "w3school 在线教程",
+            url: "http://www.w3school.com.cn/"
+        }],
+        Git: [{
+            ico: "github.ico",
+            intro: "GitHub is a Web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. ",
+            title: "GitHub",
+            url: "https://github.com/"
+        }, {
+            ico: "coding.ico",
+            intro: "Coding.net 是一个面向开发者的云端开发平台,提供 git代码托管，免费的运行演示空间，代码质量分析，在线Web IDE，项目管理，开发协作，悬赏众包，冒泡社交等功能。 为开发者提供技术讨论和开发，协作工具， Coding 极速的代码体验，让开发更简单。",
+            title: "Coding",
+            url: "https://coding.net/"
+        }, {
+            ico: "gitosc.ico",
+            intro: "Git@OSC 是开源中国社区推出的基于 Git 的代码托管服务。托管到 Git@OSC 的开源项目还可以参加中国源推广计划。Git@OSC 在 GitLab 开源软件基础上做了大量的定制开发。",
+            title: "Git@OSC",
+            url: "https://git.oschina.net/"
+        }, {
+            ico: "gitcafe.ico",
+            intro: "GitCafe 是一个为您在线托管软件项目的服务平台。 这里是一个大家庭，您可以在 GitCafe 与他人快乐地进行项目分享与协作。 现在就加入 GitCafe，找到喜欢的项目与志同道合的程序员！",
+            title: "GitCafe",
+            url: "https://gitcafe.com/"
+        }],
+        "Scriptable Browser": [{
+            ico: "phantomjs.ico",
+            intro: "PhantomJS is a headless WebKit scriptable with a JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.",
+            title: "phantomjs",
+            url: "http://phantomjs.org/"
+        }, {
+            ico: "casperjs.ico",
+            intro: "CasperJS is an open source navigation scripting & testing utility written in Javascript for the PhantomJS WebKit headless browser and SlimerJS (Gecko). ",
+            title: "casperjs",
+            url: "http://casperjs.org/"
+        }, {
+            ico: "slimerjs.ico",
+            intro: "SlimerJS is similar to PhantomJs, except that it runs on top of Gecko, the browser engine of Mozilla Firefox (specifically, version 31), instead of Webkit, and is not yet truly headless.",
+            title: "slimerjs",
+            url: "http://slimerjs.org/"
+        }]
+    }
+    $.each(data_json, function(name, value) {
+        $(".site-nav").append("<li><a href=\"javascript:void(0);\">" + name + "</a></li>");
+        var _temp = "<div class=\"site-content\"><ul class=\"blog-list\">";
+        for (var str of value) {
+            _temp += "<li data-url=\"" + str.url + "\">";
+            _temp += "<div class=\"li-content\">";
+            _temp += "<a href=\"" + str.url + "\" target=\"_blank\" title=\"" + str.title + "\">";
+            _temp += "<img src=\"./ico/" + str.ico + "\" alt=\"" + str.title + "\" />";
+            _temp += "<em> " + str.title + "</em>";
+            _temp += "</a>";
+            _temp += "<div class=\"blog-summary\">" + str.intro + "</div>";
+            _temp += "</div></li>";
+        }
+        $(".site-main").append(_temp + "</ul></div>");
+    })
+    $("#classify > li").first().addClass("active");
+    var curr_num = 0;
+    $(".blog-list li").click(function() {
+        // window.location.href = $(this).data("url");
+        window.open($(this).data("url"))
+    })
+    $("#classify li").click(function() {
+        // console.log($(this).index());
+        $(this).addClass("active").siblings().removeClass("active");
+        curr_num = $(this).index();
+        $(".site-main>div").eq(curr_num).show().waterfall().siblings().hide();
+        $(".site-main>div").eq(curr_num).siblings().each(function() {
+            $(this).find("li").each(function() {
+                this.style.cssText = 'left:0px; top:0px;';
+            })
+        })
+    })
+
+    $(window).resize(function() {
+        $(".site-main>div").eq(curr_num).waterfall()
+    });
+    $(".site-main>div").hide().first().show();
+    $.fn.waterfall = function(options) {
+        var df = {
+            item: 'li',
+            margin: 0,
+            addfooter: true
+        };
+        options = $.extend(df, options);
+        return this.each(function() {
+            var $box = $(this),
+                pos = [],
+                _box_width = $box.width()
+            $items = $box.find(options.item),
+                _owidth = $items.eq(0).outerWidth() + options.margin,
+                _oheight = $items.eq(0).outerHeight() + options.margin,
+                _num = Math.ceil(_box_width / _owidth);
+            (function() {
+                var i = 0;
+                for (; i < _num; i++) {
+                    pos.push([i * _owidth, 0]);
+                }
+            })();
+            $items.each(function() {
+                var _this = $(this),
+                    _temp = 0,
+                    _height = _this.outerHeight() + options.margin;
+                _this.hover(function() {
+                    _this.addClass('hover');
+                }, function() {
+                    _this.removeClass('hover');
+                });
+                for (var j = 0; j < _num; j++) {
+                    if (pos[j][1] < pos[_temp][1]) {
+                        _temp = j;
+                    }
+                }
+                //this.style.cssText = 'left:' + pos[_temp][0] + 'px; top:' + pos[_temp][1] + 'px;';
+                $(this).animate({
+                    left: pos[_temp][0],
+                    top: pos[_temp][1]
+                }, 500);
+                pos[_temp][1] = pos[_temp][1] + _height;
+            });
+        });
+    }
+    $(".site-main>div").eq(0).waterfall()
+    </script>
+</body>
+
+</html>
